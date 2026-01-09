@@ -1,0 +1,212 @@
+1. SYSTEM ANALYSIS
+
+1.1 Introduction
+
+JobPortal: A Comprehensive Employment Management Platform is a web-based application developed to automate and manage the recruitment process. The system is deployed locally using XAMPP and stored at C:\xampp\htdocs\JobPortal. It provides a centralized platform where administrators manage job postings and users search and apply for jobs online.
+
+1.2 Problem Statement
+
+Traditional recruitment systems rely on manual processes such as email-based job applications and unstructured data storage. These methods are inefficient, time-consuming, and prone to data loss and mismanagement.
+
+1.3 Existing System
+
+Manual job posting on multiple platforms
+
+Applications received via email
+
+No centralized database
+
+Difficult application tracking
+
+High administrative workload
+
+1.4 Proposed System
+
+The proposed JobPortal system provides:
+
+Centralized job and application management
+
+Role-based access (Admin and User)
+
+Online job posting and application submission
+
+Secure data storage using MySQL
+
+Faster and more transparent recruitment process
+
+1.5 Objectives
+
+To automate the recruitment process
+
+To reduce manual workload
+
+To provide easy job searching and application
+
+To maintain structured and secure data
+
+1.6 Scope of the System
+
+Admin can add, edit, delete jobs
+
+Users can register, login, view jobs, and apply
+
+Applications are stored in a database
+
+System runs on local server (XAMPP)
+
+1.7 Functional Requirements
+
+User authentication
+
+Job posting and management
+
+Job search and filtering
+
+Online application submission
+
+Application tracking
+
+1.8 Non-Functional Requirements
+
+Security
+
+Performance
+
+Scalability
+
+Usability
+
+2. SYSTEM DESIGN
+
+2.1. DATA FLOW DIAGRAM (DFD)
+2.1.1 DFD Level 0 (Context Diagram)
+
+External Entities:
+
+Admin
+
+User
+
+Process:
+
+JobPortal System
+
+Data Flow:
+
+Admin → Job Details → System
+
+User → Login / Application → System
+
+System → Job Listings → User
+
+2.1.2 DFD Level 1
+
+Processes:
+
+User Authentication
+
+Job Posting
+
+Job Searching
+
+Job Application
+
+Application Management
+
+Data Store:
+
+MySQL Database
+
+2.2 UML DIAGRAM
+2.2.1 Use Case Diagram
+Actors
+
+Admin
+
+Job Seeker
+
+Admin Use Cases
+
+Login
+
+Add Job
+
+Edit Job
+
+Delete Job
+
+View Applications
+
+Manage Users
+
+Job Seeker Use Cases
+
+Register
+
+Login
+
+View Jobs
+
+Apply for Job
+
+Logout
+
+2.2.2 Class Diagram
+Classes
+
+User
+
+Admin
+
+Job
+
+Application
+
+Database
+
+Relationships
+
+User applies for Job
+
+Admin manages Job
+
+Job has multiple Applications
+
+2.3 ER DIAGRAM
+2.3.1 Entities
+User
+
+user_id (PK)
+
+name
+
+email
+
+password
+
+role
+
+Job
+
+job_id (PK)
+
+title
+
+company
+
+location
+
+salary
+
+description
+
+Application
+
+application_id (PK)
+
+user_id (FK)
+
+job_id (FK)
+
+apply_date
+
