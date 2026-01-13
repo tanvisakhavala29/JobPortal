@@ -66,3 +66,20 @@ button[disabled], .btn[disabled] { opacity: 0.6; cursor: default; }
 
 .panel { background: #fff; padding: 18px; border-radius: 12px; box-shadow: 0 6px 18px rgba(15,23,42,0.06); }
 
+/* Auth / Login page styles */
+.auth-container { display:flex; align-items:center; justify-content:center; min-height: calc(100vh - 40px); padding:20px; background: #f3f4f6; }
+.auth-card { width:100%; max-width:480px; background:#fff; padding:26px; border-radius:12px; box-shadow: 0 12px 30px rgba(2,6,23,0.08); }
+.auth-title { margin:0 0 8px; font-size:20px; text-align:center; color:#0f172a; }
+.auth-switch { display:flex; gap:8px; justify-content:center; margin-bottom:14px; }
+.auth-switch button { background:transparent; color:#374151; padding:8px 12px; border-radius:8px; border:1px solid transparent; cursor:pointer; }
+.auth-switch button.active { background:#3b82f6; color:#fff; border-color:#3b82f6; }
+.form-row { margin-bottom:12px; }
+.form-row label { font-weight:600; margin-bottom:6px; display:block; color:#111827; }
+input[type="email"], input[type="password"], input[type="text"] { height:44px; }
+.auth-actions { margin-top:12px; display:flex; justify-content:flex-end; gap:8px; }
+.auth-note { font-size:13px; color:#6b7280; text-align:center; margin-top:12px; }
+
+@media (max-width:480px) {
+  .auth-card { padding:18px; margin:8px; }
+}
+
